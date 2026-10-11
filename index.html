@@ -1,1 +1,163 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Girish S. Haragon | Software Development Engineer</title>
+  <meta name="description" content="Portfolio of Girish S. Haragon, Software Development Engineer specializing in Java, Spring Boot, Python Flask, Kafka and data analysis." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">GH<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="menu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-banner"></div>
+      <div class="blob b1"></div><div class="blob b2"></div>
+      <div class="hero-inner reveal">
+        <img class="avatar" src="assets/profile.jpg" alt="Girish S. Haragon" width="150" height="150" onerror="this.style.display='none'" />
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Girish S. Haragon</h1>
+        <h2>Software Development Engineer</h2>
+        <p class="typed-line"><span class="mono" id="typed"></span><span class="cursor">|</span></p>
+        <p class="lead">I build reliable backend systems and real-time data pipelines with Java, Spring Boot, Python and Kafka.</p>
+        <div class="cta">
+          <a href="#contact" class="btn primary">Get in touch</a>
+          <a href="#experience" class="btn ghost">View experience</a>
+        </div>
+        <div class="stats">
+          <div><strong data-count="5" data-suffix="+">0</strong><span>Years in tech</span></div>
+          <div><strong data-count="2">0</strong><span>Companies</span></div>
+          <div><strong data-count="13">0</strong><span>Core technologies</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h3 class="section-title reveal">About Me</h3>
+        <div class="about-grid">
+          <div class="reveal">
+            <p>I'm a Software Development Engineer with hands-on experience in <b>Java/J2EE</b>, <b>Spring Boot</b> and <b>REST APIs</b>, building scalable and maintainable backend services for enterprise applications.</p>
+            <p>Across roughly three years of Spring Boot and Python Flask projects, I have worked on data analysis services and event-driven systems. I design Kafka-based streaming pipelines where producers publish events, consumers process them in near real time, and the results feed analytics, dashboards and alerting.</p>
+            <p>I care about observability and clean code: I monitor services with Splunk, Prometheus and Grafana, containerize them with Docker, and run them on Linux.</p>
+          </div>
+          <div class="cards reveal">
+            <div class="card"><h4>Java &amp; Spring Boot</h4><p>REST APIs, J2EE, Hibernate and MySQL for robust backend services.</p></div>
+            <div class="card"><h4>Python Flask</h4><p>Lightweight services and scripts for data analysis workloads.</p></div>
+            <div class="card"><h4>Kafka Streaming</h4><p>Topics, producers, consumers and consumer groups for real-time message processing.</p></div>
+            <div class="card"><h4>Observability</h4><p>Logs, metrics and dashboards using Splunk, Prometheus and Grafana.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h3 class="section-title reveal">Skills</h3>
+        <div class="skills reveal">
+          <div class="skill"><span class="ico"><i class="devicon-java-plain colored"></i></span><span>Java</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-spring-original colored"></i></span><span>Spring Boot</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-hibernate-plain colored"></i></span><span>Hibernate</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-mysql-original colored"></i></span><span>MySQL</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-github-original"></i></span><span>GitHub</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-python-plain colored"></i></span><span>Python</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-mongodb-plain colored"></i></span><span>MongoDB</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-apachekafka-original"></i></span><span>Kafka</span></div>
+          <div class="skill"><span class="ico"><i class="badge">S</i></span><span>Splunk</span></div>
+          <div class="skill"><span class="ico"><img src="https://cdn.simpleicons.org/grafana/F46800" alt="" width="40" height="40" loading="lazy"></span><span>Grafana</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-prometheus-original colored"></i></span><span>Prometheus</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-docker-plain colored"></i></span><span>Docker</span></div>
+          <div class="skill"><span class="ico"><i class="devicon-linux-plain"></i></span><span>Linux</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h3 class="section-title reveal">Experience</h3>
+        <div class="timeline">
+          <article class="t-item reveal">
+            <span class="dot"></span>
+            <div class="t-card">
+              <span class="date">11 Dec 2023 – Present</span>
+              <h4>Software Development Engineer</h4>
+              <p class="company">Lloyds Technology Centre, Hyderabad</p>
+              <ul>
+                <li>Develop and maintain Java Spring Boot microservices and REST APIs.</li>
+                <li>Build Python Flask services for data analysis.</li>
+                <li>Work on Kafka-based message streaming pipelines for real-time processing.</li>
+                <li>Monitor and troubleshoot with Splunk, Prometheus and Grafana.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="t-item reveal">
+            <span class="dot"></span>
+            <div class="t-card">
+              <span class="date">Aug 2021 – Jul 2023</span>
+              <h4>Junior Software Developer</h4>
+              <p class="company">PositiveEdge Solutions Pvt Ltd</p>
+              <ul>
+                <li>Developed backend features using Java/J2EE and Spring Boot.</li>
+                <li>Built and consumed REST APIs backed by Hibernate and MySQL.</li>
+                <li>Collaborated with the team using GitHub-based workflows.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <h3 class="section-title reveal">Education</h3>
+        <div class="edu-grid">
+          <div class="card reveal"><span class="date">2021</span><h4>B.E.</h4><p>Visvesvaraya Technological University (VTU)</p></div>
+          <div class="card reveal"><span class="date">2018</span><h4>Diploma</h4><p>Visvesvaraya Technological University (VTU)</p></div>
+          <div class="card reveal"><span class="date">2014</span><h4>SSLC</h4><p>Karnataka Secondary Education Examination Board (KSEEB)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h3 class="section-title reveal">Contact</h3>
+        <p class="center reveal">Open to conversations about backend engineering, data pipelines and new opportunities.</p>
+        <div class="contact-grid reveal">
+          <a class="contact" href="mailto:girishharagon115@gmail.com"><b>Email</b><span>girishharagon115@gmail.com</span></a>
+          <a class="contact" href="tel:+918884168359"><b>Phone</b><span>+91-88841 68359</span></a>
+          <a class="contact" href="https://www.linkedin.com/in/girishharagon/" target="_blank" rel="noopener noreferrer"><b>LinkedIn</b><span>/in/girishharagon</span></a>
+          <a class="contact" href="https://github.com/giri-s-h" target="_blank" rel="noopener noreferrer"><b>GitHub</b><span>github.com/giri-s-h</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© 2026 Girish S. Haragon</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
