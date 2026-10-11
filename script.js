@@ -23,6 +23,13 @@
     a.addEventListener('click', function () { menu.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
   });
 
+  // Flip cards
+  document.querySelectorAll('.flip').forEach(function (f) {
+    function toggle() { var on = f.classList.toggle('flipped'); f.setAttribute('aria-pressed', on); }
+    f.addEventListener('click', toggle);
+    f.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+
   // Typed text
   var phrases = ['Java • Spring Boot • REST APIs', 'Kafka message streaming', 'Python Flask data analysis', 'Observability with Grafana & Prometheus'];
   var el = document.getElementById('typed'), p = 0, c = 0, del = false;
