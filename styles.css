@@ -54,6 +54,13 @@ nav a:hover,nav a.active{color:var(--primary)}
 .hero-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,var(--bg))}
 .avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid var(--bg2);box-shadow:0 0 0 3px var(--primary),var(--shadow);margin:0 auto 18px;display:block}
 
+.avatar{cursor:zoom-in;transition:transform .25s}
+.avatar:hover{transform:scale(1.04)}
+.lightbox{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:rgba(5,8,20,.82);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;cursor:zoom-out}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{width:min(92vw,92vh,680px);height:min(92vw,92vh,680px);border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 0 0 4px var(--primary),0 30px 80px rgba(0,0,0,.5);transform:scale(.6);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.lightbox.open img{transform:scale(1)}
+
 /* SECTIONS */
 .section{padding:90px 0}
 .section.alt{background:var(--bg2)}

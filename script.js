@@ -23,6 +23,28 @@
     a.addEventListener('click', function () { menu.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
   });
 
+  // Profile photo lightbox (built here so it works with or without markup in the HTML)
+  var av = document.getElementById('avatar');
+  if (av) {
+    var lb = document.getElementById('lightbox');
+    if (!lb) {
+      lb = document.createElement('div');
+      lb.id = 'lightbox'; lb.className = 'lightbox';
+      lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-label', 'Profile photo'); lb.setAttribute('aria-hidden', 'true');
+      lb.appendChild(document.createElement('img'));
+      document.body.appendChild(lb);
+    }
+    var big = lb.querySelector('img');
+    var setLb = function (on) {
+      if (on) { big.src = av.currentSrc || av.src; big.alt = av.alt; }
+      lb.classList.toggle('open', on); lb.setAttribute('aria-hidden', String(!on));
+    };
+    av.addEventListener('click', function () { setLb(true); });
+    av.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setLb(true); } });
+    lb.addEventListener('click', function () { setLb(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setLb(false); });
+  }
+
   // Flip cards
   document.querySelectorAll('.flip').forEach(function (f) {
     function toggle() { var on = f.classList.toggle('flipped'); f.setAttribute('aria-pressed', on); }
